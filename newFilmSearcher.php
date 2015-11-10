@@ -17,7 +17,7 @@
 
         while ($row = fetchFilms())
         {
-                echo $row['first_name'] .$row['last_name'] . "<br/>";
+                echo $row['first_name'] ." ".$row['last_name'] . "<br/>";
         }
 
         closeDB();

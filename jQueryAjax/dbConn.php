@@ -28,13 +28,11 @@
  {
     global $dbConnection;
     global $result;
-
-    $sqlStatement = ("SELECT first_name,last_name FROM employees WHERE first_name LIKE '%$searchString%' OR last_name LIKE '%$searchString%' LIMIT 10");
-
+    $sqlStatement = ("SELECT first_name,last_name, emp_no FROM employees WHERE first_name LIKE '%$searchString%' OR last_name LIKE '%$searchString%' LIMIT 10");
     $result = mysqli_query($dbConnection,$sqlStatement);
     if(!$result)
     {
-            die('Could not retrieve records from the employees Database: ' .
+            die('Could not retrieve records from the Employees Database: ' .
                     mysqli_error($dbConnection));
     }
 
